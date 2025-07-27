@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - ANC Greece</title>
+    <link rel="stylesheet" href="globals.css">
+</head>
+<body class="bg-gray-50 text-black min-h-screen">
+    <script src="scripts/mobile-menu.js"></script>
+    <!-- Navigation -->
+    <!-- Fixed navigation bar with modern design -->
+    <nav class="fixed top-0 border-solid border-gray-200 w-full border-b py-3 bg-white z-50">
+        <!-- Container with max width for better layout control -->
+        <div class="container mx-auto max-w-4xl py-4">
+            <!-- Main navigation wrapper - responsive flex layout -->
+            <div class="w-full flex flex-col lg:flex-row">
+                
+                <!-- Top section: Logo and mobile menu button -->
+                <div class="flex justify-between lg:flex-row">
+                    <!-- Site logo/brand - always visible -->
+                    <a href="index.html" class="flex items-center">
+                        <h1 class="text-xl font-bold text-gray-900">ANC.GR</h1>
+                    </a>
+                    
+                    <!-- Mobile hamburger menu button - only visible on mobile -->
+                    <button data-collapse-toggle="navbar-default-example" type="button"
+                        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                        aria-controls="navbar-default-example" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon SVG -->
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop navigation menu - hidden on mobile -->
+                <div class="hidden w-full lg:flex lg:justify-between lg:items-center lg:pl-11" id="navbar-default-example">
+                    
+                    <!-- Center section: Philosopher links -->
+                    <ul class="flex items-center gap-6">
+                        <li>
+                            <!-- Socrates page link -->
+                            <a href="blog/socrates.html"
+                                class="text-gray-500 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500">Socrates</a>
+                        </li>
+                        <li>
+                            <!-- Xenophon page link -->
+                            <a href="blog/ksenofontas.html"
+                                class="text-gray-500 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500">Xenophon</a>
+                        </li>
+                        <li>
+                            <!-- Pericles page link -->
+                            <a href="blog/periklis.html"
+                                class="text-gray-500 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500">Pericles</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Right section: Home and Search with icons -->
+                    <ul class="flex items-center gap-4">
+                        <li>
+                            <!-- Home page link with house icon -->
+                            <a href="index.html"
+                                class="flex items-center gap-2 text-gray-500 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house">
+                                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                                    <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <!-- Search page link with search icon - currently active page -->
+                            <a href="search.html"
+                                class="flex items-center gap-2 text-gray-900 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search">
+                                    <path d="m21 21-4.34-4.34"/>
+                                    <circle cx="11" cy="11" r="8"/>
+                                </svg>
+                                Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto p-6 md:p-8 mt-24 md:mt-16">
+        <!-- Breadcrumbs -->
+        <nav class="mb-8 mt-10">
+            <a href="index.html" class="text-gray-600 hover:text-black">Home</a>
+            <span class="text-gray-400 mx-2">/</span>
+            <span class="text-black">Search</span>
+        </nav>
+
+        <div class="mb-12">
+            <h1 class="text-4xl font-bold mb-4">Search Philosophers</h1>
+            <p class="text-lg text-gray-600 mb-8">Find information about ancient Greek philosophers and their teachings</p>
+            
+            <!-- Search Form -->
+            <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search for philosophers, quotes, or concepts..." 
+                    class="w-full p-4 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                >
+                <button 
+                    onclick="performSearch()" 
+                    class="mt-4 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
+                >
+                    Search
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Results -->
+        <div id="searchResults" class="hidden">
+            <h2 class="text-2xl font-bold mb-6">Search Results</h2>
+            <div id="resultsContainer"></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Browse by Philosopher</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="blog/socrates.html" class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 block">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="assets/socrates.jpg" alt="Socrates" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Socrates</h3>
+                        <p class="text-gray-600 mb-4">Father of Western philosophy</p>
+                        <div class="text-sm text-gray-500">
+                            <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full">Philosophy</span>
+                            <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full ml-2">Ethics</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog/ksenofontas.html" class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 block">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="assets/xenophon.webp" alt="Xenophon" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Xenophon</h3>
+                        <p class="text-gray-600 mb-4">Historian and student of Socrates</p>
+                        <div class="text-sm text-gray-500">
+                            <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full">History</span>
+                            <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full ml-2">Philosophy</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog/periklis.html" class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 block">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="assets/pericles.jpg" alt="Pericles" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Pericles</h3>
+                        <p class="text-gray-600 mb-4">Athenian statesman and orator</p>
+                        <div class="text-sm text-gray-500">
+                            <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full">Politics</span>
+                            <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full ml-2">Democracy</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Popular Searches -->
+        <div>
+            <h2 class="text-2xl font-bold mb-6">Popular Topics</h2>
+                            <div class="flex flex-wrap gap-3">
+                <button onclick="searchFor('virtue')" class="bg-indigo-100 text-indigo-600 hover:bg-indigo-200 px-4 py-2 rounded-lg transition-colors">Virtue</button>
+                <button onclick="searchFor('wisdom')" class="bg-indigo-100 text-indigo-600 hover:bg-indigo-200 px-4 py-2 rounded-lg transition-colors">Wisdom</button>
+                <button onclick="searchFor('democracy')" class="bg-indigo-100 text-indigo-600 hover:bg-indigo-200 px-4 py-2 rounded-lg transition-colors">Democracy</button>
+                <button onclick="searchFor('Socratic method')" class="bg-indigo-100 text-indigo-600 hover:bg-indigo-200 px-4 py-2 rounded-lg transition-colors">Socratic Method</button>
+                <button onclick="searchFor('Athens')" class="bg-indigo-100 text-indigo-600 hover:bg-indigo-200 px-4 py-2 rounded-lg transition-colors">Athens</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-600 text-indigo-100 p-4 mt-16">
+        <div class="max-w-4xl mx-auto text-center text-xs">
+            <p>&copy; 2024 ANC Greece. Exploring ancient wisdom.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple search data for demonstration
+        const searchData = [
+            {
+                title: "Socrates",
+                url: "blog/socrates.html",
+                description: "The father of Western philosophy, known for the Socratic method and 'I know that I know nothing.'",
+                keywords: ["philosophy", "socratic method", "virtue", "wisdom", "athens", "knowledge"]
+            },
+            {
+                title: "Xenophon",
+                url: "blog/ksenofontas.html", 
+                description: "Student of Socrates, historian, and philosopher known for his historical works.",
+                keywords: ["history", "anabasis", "memorabilia", "socrates", "student", "soldier"]
+            },
+            {
+                title: "Pericles",
+                url: "blog/periklis.html",
+                description: "Influential Athenian statesman and orator during the Golden Age of Athens.",
+                keywords: ["athens", "democracy", "politics", "golden age", "funeral oration", "parthenon"]
+            }
+        ];
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (query === '') return;
+
+            const results = searchData.filter(item => 
+                item.title.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query) ||
+                item.keywords.some(keyword => keyword.toLowerCase().includes(query))
+            );
+
+            displayResults(results, query);
+        }
+
+        function searchFor(term) {
+            document.getElementById('searchInput').value = term;
+            performSearch();
+        }
+
+        function displayResults(results, query) {
+            const resultsContainer = document.getElementById('resultsContainer');
+            const searchResults = document.getElementById('searchResults');
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="text-center py-8">
+                        <p class="text-lg text-gray-600">No results found for "${query}"</p>
+                        <p class="text-gray-500 mt-2">Try searching for "Socrates", "virtue", or "democracy"</p>
+                    </div>
+                `;
+            } else {
+                resultsContainer.innerHTML = results.map(result => `
+                    <div class="bg-gray-50 p-6 rounded-lg mb-4">
+                        <h3 class="text-xl font-bold mb-2">
+                            <a href="${result.url}" class="hover:text-gray-600">${result.title}</a>
+                        </h3>
+                        <p class="text-gray-600 mb-3">${result.description}</p>
+                        <a href="${result.url}" class="text-black hover:underline">Read more →</a>
+                    </div>
+                `).join('');
+            }
+
+            searchResults.classList.remove('hidden');
+            searchResults.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Allow Enter key to trigger search
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+    </script>
+</body>
+</html>

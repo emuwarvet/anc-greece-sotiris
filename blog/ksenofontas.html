@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xenophon - ANC Greece</title>
+    <link rel="stylesheet" href="../globals.css">
+</head>
+<body class="bg-gray-50 text-black min-h-screen">
+    <script src="../scripts/mobile-menu.js"></script>
+    <!-- Navigation -->
+    <!-- Fixed navigation bar with modern design -->
+    <nav class="fixed top-0 border-solid border-gray-200 w-full border-b py-3 bg-white z-50">
+        <!-- Container with max width for better layout control -->
+        <div class="container mx-auto max-w-4xl py-4">
+            <!-- Main navigation wrapper - responsive flex layout -->
+            <div class="w-full flex flex-col lg:flex-row">
+                
+                <!-- Top section: Logo and mobile menu button -->
+                <div class="flex justify-between lg:flex-row">
+                    <!-- Site logo/brand - always visible -->
+                    <a href="../index.html" class="flex items-center">
+                        <h1 class="text-xl font-bold text-gray-900">ANC.GR</h1>
+                    </a>
+                    
+                    <!-- Mobile hamburger menu button - only visible on mobile -->
+                    <button data-collapse-toggle="navbar-default-example" type="button"
+                        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                        aria-controls="navbar-default-example" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon SVG -->
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop navigation menu - hidden on mobile -->
+                <div class="hidden w-full lg:flex lg:justify-between lg:items-center lg:pl-11" id="navbar-default-example">
+                    
+                    <!-- Center section: Philosopher links -->
+                    <ul class="flex items-center gap-6">
+                        <li>
+                            <!-- Socrates page link -->
+                            <a href="socrates.html"
+                                class="text-gray-500 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500">Socrates</a>
+                        </li>
+                        <li>
+                            <!-- Xenophon page link - currently active page -->
+                            <a href="ksenofontas.html"
+                                class="text-gray-900 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500">Xenophon</a>
+                        </li>
+                        <li>
+                            <!-- Pericles page link -->
+                            <a href="periklis.html"
+                                class="text-gray-500 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500">Pericles</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Right section: Home and Search with icons -->
+                    <ul class="flex items-center gap-4">
+                        <li>
+                            <!-- Home page link with house icon -->
+                            <a href="../index.html"
+                                class="flex items-center gap-2 text-gray-500 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house">
+                                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                                    <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <!-- Search page link with search icon -->
+                            <a href="../search.html"
+                                class="flex items-center gap-2 text-gray-500 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search">
+                                    <path d="m21 21-4.34-4.34"/>
+                                    <circle cx="11" cy="11" r="8"/>
+                                </svg>
+                                Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <!-- Add top margin to account for fixed navbar -->
+    <main class="max-w-4xl mx-auto p-6 md:p-8 mt-24 md:mt-16">
+        <!-- Breadcrumbs -->
+        <nav class="mb-8 mt-10">
+            <a href="../index.html" class="text-gray-600 hover:text-black">Home</a>
+            <span class="text-gray-400 mx-2">/</span>
+            <span class="text-black">Xenophon</span>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+            <div class="aspect-video overflow-hidden">
+                <img src="../assets/xenophon.webp" alt="Xenophon" class="w-full h-full object-cover">
+            </div>
+            <div class="p-8">
+                <h1 class="text-4xl font-bold mb-4 text-gray-900">Xenophon (430-354 BCE)</h1>
+                <p class="text-lg text-gray-600">Historian, philosopher, and student of Socrates</p>
+            </div>
+        </div>
+
+        <article class="prose max-w-none bg-white rounded-xl shadow-lg p-8">
+            
+            <div class="bg-indigo-50 p-6 rounded-lg mb-8 border-l-4 border-indigo-600">
+                <p class="text-lg italic text-indigo-800">"The best thing about the future is that it comes one day at a time."</p>
+            </div>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Biography</h2>
+                <p class="mb-4">
+                    Xenophon was an ancient Greek historian, philosopher, and soldier, a student of Socrates. 
+                    As a historian, Xenophon is known for his writings on the history of his own times, the 
+                    late 5th and early 4th centuries BC.
+                </p>
+                <p class="mb-4">
+                    Born into the upper classes of Athens, Xenophon was exiled from his native city and 
+                    granted an estate in Sparta. His works span several genres and are valuable for their 
+                    insight into both philosophical thought and historical events of ancient Greece.
+                </p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Major Works</h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong>Anabasis</strong> - Account of the Greek expedition into Persia</li>
+                    <li><strong>Memorabilia</strong> - Recollections of conversations with Socrates</li>
+                    <li><strong>Cyropaedia</strong> - Political romance about Cyrus the Great</li>
+                    <li><strong>Hellenica</strong> - History of Greece during his lifetime</li>
+                </ul>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Philosophical Contributions</h2>
+                <p>
+                    While not as philosophically profound as Plato, Xenophon provides a more practical 
+                    and accessible account of Socrates' teachings. His works emphasize virtue, practical 
+                    wisdom, and moral conduct in daily life, making philosophy accessible to ordinary people.
+                </p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Legacy</h2>
+                <p>
+                    Xenophon's historical works provide invaluable insights into ancient Greek society, 
+                    warfare, and politics. His philosophical writings offer a different perspective on 
+                    Socrates than Plato's, showing the practical application of Socratic ethics.
+                </p>
+            </section>
+        </article>
+
+        <!-- Navigation to other philosophers -->
+        <div class="bg-white rounded-xl shadow-lg p-8 mt-8">
+            <h3 class="text-xl font-bold mb-6 text-gray-900">Explore Other Philosophers</h3>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="socrates.html" class="bg-gray-50 hover:bg-indigo-50 p-4 rounded-lg transition-colors border border-gray-200 hover:border-indigo-200 flex items-center space-x-3">
+                    <img src="../assets/socrates.jpg" alt="Socrates" class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                        <h4 class="font-semibold text-gray-900">Socrates</h4>
+                        <p class="text-sm text-indigo-600">Father of Philosophy</p>
+                    </div>
+                </a>
+                <a href="periklis.html" class="bg-gray-50 hover:bg-indigo-50 p-4 rounded-lg transition-colors border border-gray-200 hover:border-indigo-200 flex items-center space-x-3">
+                    <img src="../assets/pericles.jpg" alt="Pericles" class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                        <h4 class="font-semibold text-gray-900">Pericles</h4>
+                        <p class="text-sm text-indigo-600">Athenian Leader</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-600 text-indigo-100 p-4 mt-16">
+        <div class="max-w-4xl mx-auto text-center text-xs">
+            <p>&copy; 2024 ANC Greece. Exploring ancient wisdom.</p>
+        </div>
+    </footer>
+</body>
+</html>
