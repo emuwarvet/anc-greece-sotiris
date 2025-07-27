@@ -1,11 +1,12 @@
 {
   "scripts": {
-    "dev": "bun --watch tailwindcss -i globals.css -o dist/styles.css & bun run serve",
-    "build": "tailwindcss -i globals.css -o dist/styles.css",
-    "serve": "bun --bun serve --port 3000 ."
+    "dev": "concurrently \"bun --watch tailwindcss -i input.css -o globals.css\""
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
   }
 }
